@@ -11,10 +11,11 @@ router.get('/query', query);
 
 function query(req, res) {
     let key = req.query.key || req.query.KEY;
-    console.log('query key =', key);
     if (!!register_pool[key]) {
+        console.log('good key :', key);
         res.end('1');
     } else {
+        console.log('bad key :', key);
         res.end('0');
     }
 }
