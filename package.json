@@ -1,0 +1,22 @@
+{
+  "name": "ssh_qrencode_login_checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freelw/ssh_qrencode_login_checker.git"
+  },
+  "author": "freelw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freelw/ssh_qrencode_login_checker/issues"
+  },
+  "homepage": "https://github.com/freelw/ssh_qrencode_login_checker#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
