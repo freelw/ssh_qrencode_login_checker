@@ -10,7 +10,7 @@ router.get('/register', register);
 router.get('/query', query);
 
 function query(req, res) {
-    let key = req.query.key;
+    let key = req.query.key || req.query.KEY;
     console.log('query key =', key);
     if (!!register_pool[key]) {
         res.end('1');
@@ -20,9 +20,10 @@ function query(req, res) {
 }
 
 function register(req, res) {
+    let key = req.query.key || req.query.KEY;
     console.log('req.query : ', req.query);
-    console.log('register : ', req.query.key);
-    register_pool[req.query.key] = Date.now();
+    console.log('register : ', key);
+    register_pool[key] = Date.now();
     res.end('0');
 }
 
