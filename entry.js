@@ -20,6 +20,7 @@ function query(req, res) {
 }
 
 function register(req, res) {
+    console.log('req.query : ', req.query);
     console.log('register : ', req.query.key);
     register_pool[req.query.key] = Date.now();
     res.end('0');
