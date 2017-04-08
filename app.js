@@ -10,7 +10,7 @@ app.use(function (req, res) {
 });
 app.set('host', '0.0.0.0');
 app.set('port', 8080);
-app.listen(app.get('port'), app.get('host'), function () {
+const server = app.listen(app.get('port'), app.get('host'), function () {
     console.log('Express server listening on port', server.address().port);
 });
 process.on('uncaughtException', function(err){
